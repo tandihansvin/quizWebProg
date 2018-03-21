@@ -1,0 +1,83 @@
+<div>
+  <form method="get" (submit)="loadCategory()">
+    <input type="submit" value="show category">
+  </form>
+</div>
+
+<div>
+  <p>Create Category:</p>
+  <form method="post" (submit)="createCategory()">
+    <label>name</label>
+    <input type="text" name="name" [(ngModel)]="CModel.name">
+    <input type="submit" value="add">
+  </form>
+</div>
+
+<div>
+  <p>Update Category:</p>
+  <form method="post" (submit)="updateCategory()">
+    <label>id</label>
+    <input type="text" name="id" [(ngModel)]="UModel.id">
+    <label>name</label>
+    <input type="text" name="name" [(ngModel)]="UModel.name">
+    <input type="submit" value="update">
+  </form>
+</div>
+
+<div>
+  <p>Delete Category:</p>
+  <form method="post" (submit)="deleteCategory()">
+    <label>id</label>
+    <input type="text" name="id" [(ngModel)]="DModel.id">
+    <input type="submit" value="delete">
+  </form>
+</div>
+
+<p>-------I'm here (frontpage)--------</p>
+
+<div>
+  <form method="get" (submit)="loadItem()">
+    <input type="submit" value="show item">
+  </form>
+</div>
+
+<div>
+  <p>Create Category:</p>
+  <form method="post" (submit)="createItem()">
+    <label>category_id</label>
+    <input type="number" name="category_id" [(ngModel)]="CModel.category_id">
+    <label>name</label>
+    <input type="text" name="name" [(ngModel)]="CModel.name">
+    <label>price</label>
+    <input type="number" name="price" [(ngModel)]="CModel.price">
+    <label>stock</label>
+    <input type="number" name="stock" [(ngModel)]="CModel.stock">
+    <input type="submit" value="add">
+  </form>
+</div>
+
+<div>
+  <p>Update Category:</p>
+  <form method="post" (submit)="updateItem()">
+    <label>id</label>
+    <input type="text" name="id" [(ngModel)]="UModel.id">
+    <label>category_id</label>
+    <input type="number" name="category_id" [(ngModel)]="UModel.category_id">
+    <label>name</label>
+    <input type="text" name="name" [(ngModel)]="UModel.name">
+    <label>price</label>
+    <input type="number" name="price" [(ngModel)]="UModel.price">
+    <label>stock</label>
+    <input type="number" name="stock" [(ngModel)]="UModel.stock">
+    <input type="submit" value="update">
+  </form>
+</div>
+
+<div>
+  <p>Delete Category:</p>
+  <form method="post" (submit)="deleteItem()">
+    <label>id</label>
+    <input type="text" name="id" [(ngModel)]="DModel.id">
+    <input type="submit" value="delete">
+  </form>
+</div>
